@@ -1,0 +1,218 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lexend', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:url(./images/bg-pattern-top-desktop.svg),url(./images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main{
+    width: 80%;
+    margin: auto;
+}
+.upper-section{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+.heading{
+    flex-basis: 48%;
+}
+.heading h1{
+    color: rgb(81, 31, 80);
+}
+.heading p{
+    padding-top: 2rem;
+    line-height: 1.5rem;
+}
+.rating-section{
+    flex-basis: 48%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 15px 15px 1fr 15px 15px;
+    gap: 20px;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    background-color: rgb(247, 242, 248);
+    border-radius: 10px;
+    padding: 1rem 0;
+}
+.rating:nth-child(1){
+    grid-row: 1/2;
+    grid-column: 1/4;
+}
+.rating:nth-child(2){
+    grid-row: 2/3;
+    grid-column: 2/5;
+}
+.rating:nth-child(3){
+    grid-row: 3/4;
+    grid-column: 3/6;
+}
+.rating-star{
+    flex-grow: 2;
+   
+    text-align: center;
+   
+}
+
+.rating-info{
+    flex-grow: 3;
+    text-align: center;
+    
+}
+.rating-info p{
+    color: rgb(81, 31, 80);
+    font-weight: 600;
+}
+.lower-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5% 5% 60% 5% 5%;
+    column-gap: 30px;
+}
+.card{
+    background-color: rgba(81, 31, 80,.9);
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    border-radius: 15px;
+}
+.card:nth-child(1){
+    grid-row: 1/4;
+    grid-column: 1/2;
+}
+
+.card:nth-child(2){
+    grid-row: 2/5;
+    grid-column: 2/3;
+}
+
+.card:nth-child(3){
+    grid-row: 3/6;
+    grid-column: 3/4;
+}
+
+
+.card-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-heading-img{
+        /* flex-grow: 1; */
+        margin-right: 1.2rem;
+}
+.card-heading-img img{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+.card-heading-info{
+    flex-grow: 2;
+}
+.card-heading-info h2{
+    color: white;
+    font-weight: 600;
+}
+.card-heading-info p{
+    color: #778787;
+}
+.card-bio{
+    margin-top: 2rem;
+}
+.card-bio p{
+    line-height: 1.4rem;
+    color: white;
+}
+
+/* Responsive for mobile screen */
+
+@media(max-width:900px){
+    body{
+        background:url(./images/bg-pattern-top-mobile.svg),url(./images/bg-pattern-bottom-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    main{
+        width: 80%;
+        margin: auto;
+        padding: 2rem 0;
+    }
+    .upper-section{
+        flex-direction: column;
+    }
+    .upper-section h1{
+        text-align: center;
+    }
+    .upper-section p{
+        text-align: center;
+    }
+    .heading{
+        flex-basis: 100%;
+        margin-bottom: 2rem;
+    }
+    .rating-section{
+      
+       
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .rating{
+        padding: 1.5rem 0;
+        flex-direction: column;
+    }
+    .rating:nth-child(1){
+        grid-row: 1/2;
+       grid-column: 1/2;
+    }
+    .rating:nth-child(2){
+        grid-row: 2/3;
+        grid-column: 1/2;
+        
+    }
+    .rating:nth-child(3){
+        grid-row: 3/4;
+        grid-column: 1/2;
+       
+    }
+    .rating-star{
+        padding-left: 0;
+        margin-bottom: .8rem;
+    }
+    .lower-section{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows:1fr 1fr 1fr;
+        row-gap: 30px;
+    }
+    .card:nth-child(1){
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    
+    .card:nth-child(2){
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    
+    .card:nth-child(3){
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+    .card-bio{
+        margin-bottom: 2rem;
+    }
+}
